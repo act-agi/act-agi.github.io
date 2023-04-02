@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+  <title>DTCCT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <meta name="google-site-verification" content="kO13Hc3VVcIrdA_JMssDp7vmwAdDOjt3eQTmShi7uYQ" />
+
+  <!-- =======================================================
+  * Template Name: Squadfree - v4.9.0
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between"></div>
+    <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>DTCCT</span></a></h1>
+      </div>
+    <!--
+    
+
+     
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#about">What is DTCCT?</a></li>
+          <li><a class="nav-link scrollto" href="#services">Research Ethics</a></li>
+          <li><a class="nav-link scrollto" href="#counts">Publications</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Funding Acknowledgemnt</a></li>
+          <li><a class="nav-link scrollto" href="https://gitlab.computing.dcu.ie/users/vermak3/projects"><i class="bi bi-github" style="font-size:2.5rem"></i></a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+    -->    
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero2">
+    <div class="hero2-container" data-aos="fade-up">
+        <h1>Follow Below Steps to Participate</h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h3>  If you are under 18 years old:</h3>
+        <p>
+            <ul style="list-style-type:none">
+                <li style="text-align: center; font-size:larger;">Step 1: Download the parental consent and child assent forms from the by clicking on below buttons</li>
+                <button class="button button1", onclick=downloadParent()>Parental Consent Form</button>
+                <button class="button button2", onclick=downloadChild()>Child Assent Form</button>
+                <br />
+                <li style="text-align: center; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
+                <br />
+                <li style="text-align: center; font-size:larger;">Step 3: Once you and your parent/guardian have read and understood the forms, tick the box below and proceed</li>
+                <br />
+                <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
+                    <label for="task-agreement">I have read and understood the task and what is expected of me</label>
+                    <input type="checkbox" id="task-agreement" name="task-agreement" onchange="checkAgreement()" />
+                    <br />
+                     <button id="submit-button", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
+                </form>
+            </ul>
+        </p>
+
+        <script>
+
+            function downloadParent() {
+                window.open("pdf/parent_consent.pdf")
+            }
+            function downloadChild() {
+                window.open("pdf/child_assent.pdf")
+            }
+            function checkAgreement() {
+                var checkbox = document.getElementById("task-agreement");
+                var button = document.getElementById("submit-button");
+                if (checkbox.checked == true) {
+                    button.style.display = "inline-block";
+                } else {
+                    button.style.display = "none";
+                }
+            } 
+        </script>
+
+        <h4>  If you are 18 years old or older:</h4>
+
+        <p>
+            <ul style="list-style-type:none">
+                <li style="text-align: center; font-size:larger;">Step 1: Download the consent forms from by clicking on the button below</li>
+                <button class="button button1", onclick=downloadAdult()>Consent Form</button>
+                <br />
+                <li style="text-align: center; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
+                <br />
+                <li style="text-align: center; font-size:larger;">Step 3: Once you have read and understood the forms, tick the box below and proceed</li>
+                <br />
+                <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
+                    <label for="task-agreement2">I have read and understood the task and what is expected of me</label>
+                    <input type="checkbox" id="task-agreement2" name="task-agreement2" onchange="checkAgreement2()" />
+                    <br />
+                     <button id="submit-button2", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
+                </form>
+            </ul>
+            
+        </p>
+        
+        <script>
+            function downloadAdult() {
+                window.open("pdf/adult_consent.pdf")
+            }
+            function checkAgreement2() {
+                var checkbox = document.getElementById("task-agreement2");
+                var button = document.getElementById("submit-button2");
+                if (checkbox.checked == true) {
+                    button.style.display = "inline-block";
+                } else {
+                    button.style.display = "none";
+                }
+            } 
+        </script>
+
+
+        
+        <!--
+            
+            <h1>Follow Below Steps to Participate</h1>
+            <h3> If you are below 18 years of age</h3>
+
+            <button class="button button2", onclick= downloadFile()>Plain Language Statement</button>
+            <script>
+            function downloadFile() {
+               window.open("PLS.pdf")
+            }
+            </script>
+
+        </div>
+        <div style="border:0.1px solid linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2));;position: absolute; bottom: 40%; left: 30% ; ">
+            
+            <h3> If you are below 18 years of age</h3>
+
+            <button class="button button2", onclick= downloadFile()>Plain Language Statement</button>
+            <script>
+            function downloadFile() {
+               window.open("PLS.pdf")
+            }
+            </script>
+
+        </div>
+        -->
+
+    </div>
+    
+      
+  </section><!-- End Hero -->
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="background-color: rgba(43, 111, 142, 0.9);">
+    <div class="footer-top">
+      <div class="container" style="text-align:center;">
+        <h3>DTCCT</h3>
+        <p class="pb-3"><em>Data-driven Toolkit to Combat Cyberbullying in Teens </em><i class="bi bi-c-circle"></i> 2022</p>
+      </div>
+    </div>
+  </footer>
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
