@@ -1553,3 +1553,21 @@ label {
   margin-right: 5%;
   text-align: left;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #008CBA;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+td {
+  background-color: #f2f2f2;
+}
