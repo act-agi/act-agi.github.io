@@ -41,148 +41,122 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
     <div class="container d-flex align-items-center justify-content-between"></div>
-    <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>DTCCT</span></a></h1>
+    <h2 style="margin-left: 100px; align-items:center; text-align:center; color: #263f49;"><strong>Participate</strong></h2>
+    <div class="logo",>
+        <h1 class="text-light", style="margin-left: 100px; color:black"><a href="index.html"><span>DTCCT</span></a></h1>
       </div>
-    <!--
-    
-
-     
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="#about">What is DTCCT?</a></li>
-          <li><a class="nav-link scrollto" href="#services">Research Ethics</a></li>
-          <li><a class="nav-link scrollto" href="#counts">Publications</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Funding Acknowledgemnt</a></li>
-          <li><a class="nav-link scrollto" href="https://gitlab.computing.dcu.ie/users/vermak3/projects"><i class="bi bi-github" style="font-size:2.5rem"></i></a></li>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-    -->    
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero2">
-    <div class="hero2-container" data-aos="fade-up">
-        <h1>Follow Below Steps to Participate</h1>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h3>  If you are under 18 years old:</h3>
-        <p>
-            <ul style="list-style-type:none">
-                <li style="text-align: center; font-size:larger;">Step 1: Download the parental consent and child assent forms from the by clicking on below buttons</li>
-                <button class="button button1", onclick=downloadParent()>Parental Consent Form</button>
-                <button class="button button2", onclick=downloadChild()>Child Assent Form</button>
-                <br />
-                <li style="text-align: center; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
-                <br />
-                <li style="text-align: center; font-size:larger;">Step 3: Once you and your parent/guardian have read and understood the forms, tick the box below and proceed</li>
-                <br />
-                <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
-                    <label for="task-agreement">I have read and understood the task and what is expected of me</label>
-                    <input type="checkbox" id="task-agreement" name="task-agreement" onchange="checkAgreement()" />
-                    <br />
-                     <button id="submit-button", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
-                </form>
-            </ul>
-        </p>
 
-        <script>
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="content">
+            <h4>Read the Plain Language Statement (PLS) before proceeding</h4>
 
-            function downloadParent() {
-                window.open("pdf/parent_consent.pdf")
-            }
-            function downloadChild() {
-                window.open("pdf/child_assent.pdf")
-            }
-            function checkAgreement() {
-                var checkbox = document.getElementById("task-agreement");
-                var button = document.getElementById("submit-button");
-                if (checkbox.checked == true) {
-                    button.style.display = "inline-block";
-                } else {
-                    button.style.display = "none";
-                }
-            } 
-        </script>
+            <button class="button button1", onclick=downloadPLSTeenager()>PLS for Teenagers</button>
+            <button class="button button2", onclick=downloadPLSAdult()>PLS for Adults</button>
 
-        <h4>  If you are 18 years old or older:</h4>
-
-        <p>
-            <ul style="list-style-type:none">
-                <li style="text-align: center; font-size:larger;">Step 1: Download the consent forms from by clicking on the button below</li>
-                <button class="button button1", onclick=downloadAdult()>Consent Form</button>
-                <br />
-                <li style="text-align: center; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
-                <br />
-                <li style="text-align: center; font-size:larger;">Step 3: Once you have read and understood the forms, tick the box below and proceed</li>
-                <br />
-                <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
-                    <label for="task-agreement2">I have read and understood the task and what is expected of me</label>
-                    <input type="checkbox" id="task-agreement2" name="task-agreement2" onchange="checkAgreement2()" />
-                    <br />
-                     <button id="submit-button2", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
-                </form>
-            </ul>
-            
-        </p>
-        
-        <script>
-            function downloadAdult() {
-                window.open("pdf/adult_consent.pdf")
-            }
-            function checkAgreement2() {
-                var checkbox = document.getElementById("task-agreement2");
-                var button = document.getElementById("submit-button2");
-                if (checkbox.checked == true) {
-                    button.style.display = "inline-block";
-                } else {
-                    button.style.display = "none";
-                }
-            } 
-        </script>
-
-
-        
-        <!--
-            
-            <h1>Follow Below Steps to Participate</h1>
-            <h3> If you are below 18 years of age</h3>
-
-            <button class="button button2", onclick= downloadFile()>Plain Language Statement</button>
             <script>
-            function downloadFile() {
-               window.open("PLS.pdf")
-            }
+                function downloadPLSTeenager() {
+                    window.open('pdf/PLS.pdf')
+                }
+                function downloadPLSAdult() {
+                    window.open('pdf/adult_pls.pdf')
+                }
             </script>
-
-        </div>
-        <div style="border:0.1px solid linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2));;position: absolute; bottom: 40%; left: 30% ; ">
             
-            <h3> If you are below 18 years of age</h3>
-
-            <button class="button button2", onclick= downloadFile()>Plain Language Statement</button>
-            <script>
-            function downloadFile() {
-               window.open("PLS.pdf")
-            }
-            </script>
-
+          </div>
         </div>
-        -->
+        <div class="col-xl-7 d-flex align-items-stretch">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4> If you are under 18 years old </h4>
+                
+                <p>
+                    <ul style="list-style-type:none">
+                        <li style="text-align: left; font-size:larger;">Step 1: Download the parental consent and child assent forms from the by clicking on below buttons</li>
+                        <button class="button button1", onclick=downloadParent()>Parental Consent Form</button>
+                        <button class="button button2", onclick=downloadChild()>Child Assent Form</button>
+                        <br />
+                        <li style="text-align: left; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
+                        <br />
+                        <li style="text-align: left; font-size:larger;">Step 3: Once you and your parent/guardian have read and understood the forms, tick the box below and proceed</li>
+                        <br />
+                        <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
+                            <label for="task-agreement">I have read and understood the task and what is expected of me</label>
+                            <input type="checkbox" id="task-agreement" name="task-agreement" onchange="checkAgreement()" />
+                            <br />
+                             <button id="submit-button", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
+                        </form>
+                    </ul>
+                </p>
+        
+                <script>
+        
+                    function downloadParent() {
+                        window.open("pdf/parent_consent.pdf")
+                    }
+                    function downloadChild() {
+                        window.open("pdf/child_assent.pdf")
+                    }
+                    function checkAgreement() {
+                        var checkbox = document.getElementById("task-agreement");
+                        var button = document.getElementById("submit-button");
+                        if (checkbox.checked == true) {
+                            button.style.display = "inline-block";
+                        } else {
+                            button.style.display = "none";
+                        }
+                    } 
+                </script>
 
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <h4>  If you are 18 years old or older:</h4>
+
+                <p>
+                <ul style="list-style-type:none">
+                    <li style="text-align: left; font-size:larger;">Step 1: Download the consent forms from by clicking on the button below</li>
+                    <button class="button button1", onclick=downloadAdult()>Consent Form</button>
+                    <br />
+                    <li style="text-align: left; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
+                    <br />
+                    <li style="text-align: left; font-size:larger;">Step 3: Once you have read and understood the forms, tick the box below and proceed</li>
+                    <br />
+                    <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
+                        <label for="task-agreement2">I have read and understood the task and what is expected of me</label>
+                        <input type="checkbox" id="task-agreement2" name="task-agreement2" onchange="checkAgreement2()" />
+                        <br />
+                        <button id="submit-button2", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
+                    </form>
+                </ul>
+            
+               </p>
+        
+                <script>
+                    function downloadAdult() {
+                        window.open("pdf/adult_consent.pdf")
+                    }
+                    function checkAgreement2() {
+                    var checkbox = document.getElementById("task-agreement2");
+                    var button = document.getElementById("submit-button2");
+                    if (checkbox.checked == true) {
+                        button.style.display = "inline-block";
+                    } else {
+                        button.style.display = "none";
+                    }
+                } 
+                </script>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
-    
-      
-  </section><!-- End Hero -->
-
-
+  </section><!-- End About Section -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" style="background-color: rgba(43, 111, 142, 0.9);">
