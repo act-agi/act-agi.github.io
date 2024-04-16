@@ -1,11 +1,3 @@
-  <!-- =======================================================
-  * Author: Kanishk Verma
-  * Webpage: participate.html
-  * Template Name: Squadfree - v4.9.0
-  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
-  * Template License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +23,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sLfjrX+nh/C2+po9j15F7cCYc7oynuEyT4kF4NwtDUNZ7PyaB2CD+4d7Eyx7cXsvdVWmTbUUmF39q1dRNuGrBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -42,124 +35,126 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .header-content {
+    background-color: rgba(43, 111, 142, 0.9); /* Background color for the rectangle */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    }
+
+    .logo {
+    margin-right: 20px;
+    }
+
+    .participate-title {
+    flex-grow: 1; /* Allow the participate title to grow and take up remaining space */
+    }
+
+    .participate-block h1 {
+    margin: 0;
+    text-align: center;
+    color: #ecf2f5; /* Color for the participate title text */
+    }
+
+    .opportunity-text {
+    font-size: 18px;
+    color: #263f49; /* Dark blue color */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    }
+
+    .btn {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary {
+    background-color: #6199c9;
+    color: #fff;
+    border: none;
+    }
+
+    .btn-secondary:hover {
+    background-color: #2d587a;
+    }
+
+    .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    }
+
+    .btn-primary:hover {
+    background-color: #0056b3;
+    }
+
+
+
+
+  </style>
+
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-transparent">
-    <div class="container d-flex align-items-center justify-content-between"></div>
-    <div class="logo">
-        <h1 style="color: #263f49;">Participate</h1>
+<header id="header" class="fixed-top header-transparent">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        
+        <div class="logo" style="font-size: 20px; color: #5c38e0;">
+          <a href="index.html" >Learn about the DTCCT project </a>
+        </div>
+  
+        <!-- Participate Title -->
+        <div class="participate-title">
+          <div class="participate-block">
+            <h1>Contribute to DTCCT project</h1>
+          </div>
+        </div>
       </div>
+    </div>
   </header><!-- End Header -->
+  
 
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
+  <section id="about" class="about" style="margin-top: 100px;">
     <div class="container">
-      <div class="row no-gutters">
-        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
-          <div class="content">
-            <h4>Read the Plain Language Statement (PLS) before proceeding</h4>
-
-            <button class="button button1", onclick=downloadPLSTeenager()>PLS for Teenagers</button>
-            <button class="button button2", onclick=downloadPLSAdult()>PLS for Adults</button>
-
-            <script>
-                function downloadPLSTeenager() {
-                    window.open('pdf/teenager_pls.pdf')
-                }
-                function downloadPLSAdult() {
-                    window.open('pdf/adult_pls.pdf')
-                }
-            </script>
-            
-          </div>
-        </div>
-        <div class="col-xl-7 d-flex align-items-stretch">
-          <div class="icon-boxes d-flex flex-column justify-content-center">
-            <div class="row">
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4> If you are under 18 years old </h4>
-                
-                <p>
-                    <ul style="list-style-type:none">
-                        <li style="text-align: left; font-size:larger;">Step 1: Download the parental consent and child assent forms from the by clicking on below buttons</li>
-                        <button class="button button1", onclick=downloadParent()>Parental Consent Form</button>
-                        <button class="button button2", onclick=downloadChild()>Child Assent Form</button>
-                        <br />
-                        <li style="text-align: left; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
-                        <br />
-                        <li style="text-align: left; font-size:larger;">Step 3: Once you and your parent/guardian have read and understood the forms, tick the box below and proceed</li>
-                        <br />
-                        <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
-                            <label for="task-agreement">I have read and understood the information in this form and PLS. I know what is expected of me and I know where to find <a href="support.html"> resources for support </a> </label>
-                            <input type="checkbox" id="task-agreement" name="task-agreement" onchange="checkAgreement()" />
-                            <br />
-                             <button id="submit-button", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
-                        </form>
-                    </ul>
-                </p>
-        
-                <script>
-        
-                    function downloadParent() {
-                        window.open("pdf/parent_consent.pdf")
-                    }
-                    function downloadChild() {
-                        window.open("pdf/child_assent.pdf")
-                    }
-                    function checkAgreement() {
-                        var checkbox = document.getElementById("task-agreement");
-                        var button = document.getElementById("submit-button");
-                        if (checkbox.checked == true) {
-                            button.style.display = "inline-block";
-                        } else {
-                            button.style.display = "none";
-                        }
-                    } 
-                </script>
-
-              </div>
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <h4>  If you are 18 years old or older</h4>
-
-                <p>
-                <ul style="list-style-type:none">
-                    <li style="text-align: left; font-size:larger;">Step 1: Download the consent forms from by clicking on the button below</li>
-                    <button class="button button1", onclick=downloadAdult()>Consent Form</button>
-                    <br />
-                    <li style="text-align: left; font-size:larger;">Step 2: Read through the forms carefully, and ask your parent or guardian to read them too.</li>
-                    <br />
-                    <li style="text-align: left; font-size:larger;">Step 3: Once you have read and understood the forms, tick the box below and proceed</li>
-                    <br />
-                    <form action="https://dcueducation.fra1.qualtrics.com/jfe/form/SV_06tcJpxlYyw66BE" method="get" target="_blank">
-                        <label for="task-agreement2">I have read and understood the information in this form and PLS. I know what is expected of me and I know where to find <a href="support.html"> resources for support </a> </label>
-                        <input type="checkbox" id="task-agreement2" name="task-agreement2" onchange="checkAgreement2()" />
-                        <br />
-                        <button id="submit-button2", class="button2", style="display:none; font-size: 16px; margin: 4px 2px; padding: 16px 32px; transition-duration: 0.4s;">Proceed to Survey</button>
-                    </form>
-                </ul>
-            
-               </p>
-        
-                <script>
-                    function downloadAdult() {
-                        window.open("pdf/adult_consent.pdf")
-                    }
-                    function checkAgreement2() {
-                    var checkbox = document.getElementById("task-agreement2");
-                    var button = document.getElementById("submit-button2");
-                    if (checkbox.checked == true) {
-                        button.style.display = "inline-block";
-                    } else {
-                        button.style.display = "none";
-                    }
-                } 
-                </script>
-              </div>
-            </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <hr>
+            <p class="opportunity-text">
+            Join our quest to decode social media trends! Your input matters ! Click on below button to attempt a 15-20 minute survey. 
+            </p>
+            <centre>
+                <button class="btn btn-primary" onclick="redirectToSurvey()">Attemp the Survey</button><br /><br />
+            </centre>
+          
+          <p  style="font-size: 12px; color: red; font-family: Courier;">Under 18? Ensure parental consent before diving into the survey. It's essential for participation!</p>
+          <hr>
+      </div>
+      
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <hr>
+            <p style="font-size: 18px; font-weight: bold; color: #263f49; font-family: Arial, sans-serif;">Exciting Opportunities Available!</p>
+            <p class="opportunity-text">
+                Are you in Transition Year? Discover the exciting opportunity to work as a Junior Research Assistant!
+              </p>
+          <!-- <h4>Transition year student? Explore the opportunity to work as a Junior Research Assistant ? </h4> -->
+          <button class="btn btn-secondary" onclick="getPLS()">Read Job description</button>
+          <button class="btn btn-primary" onclick="redirectToForm()">Fill Form</button>
+          <br /><br />
+            <p style="font-size: 16px; color: #555; font-family: Arial, sans-serif;"> We're looking for talented individuals to fill our current job openings:</p>
+            <ul style="list-style-type: none; padding-left: 0;">
+            <li style="font-size: 16px; color: #333; font-family: Arial, sans-serif;">4 positions available for females</li>
+            <li style="font-size: 16px; color: #333; font-family: Arial, sans-serif;">1 position available for males</li>
+            </ul>
+          
         </div>
       </div>
     </div>
@@ -174,7 +169,7 @@
       </div>
     </div>
   </footer>
-  
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -188,6 +183,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function redirectToSurvey() {
+      window.location.href = "https://dcueducation.fra1.qualtrics.com/jfe/form/SV_5o8cNLrMR7PPk8u";
+    }
+
+    function redirectToForm() {
+      // Replace "form_link_here" with the actual link to your form
+      window.location.href = "https://forms.gle/TYHu8Hzq2SZ7JAJt7";
+    }
+
+    function getPLS(){
+        window.open("pdf/TY_job_description.pdf");
+    }
+  </script>
 
 </body>
 
