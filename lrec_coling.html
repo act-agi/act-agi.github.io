@@ -65,8 +65,12 @@
   </header><!-- End Header -->
 
 <div class="container">
-<h3>[add button to download pdf]</h3>
- <h3>[add button to project website]</h3>
+<button class="button button2" onclick="downloadWABFPaper()">Read the Paper</button>
+          <script>
+            function downloadWABFPaper() {
+              window.open('pdf/Verma-et-al-2024-LREC-COLING.pdf')
+            }
+          </script>
 </div>
  
 <!--
@@ -98,8 +102,10 @@
   <footer id="footer" style="background-color: rgba(43, 111, 142, 0.9);">
     <div class="footer-top">
       <div class="container">
-        <h3>DTCCT</h3>
-        <p class="pb-3"><em>Data-driven Toolkit to Combat Cyberbullying in Teens </em><i class="bi bi-c-circle"></i> 2022</p>
+       <a href="https://act-agi.github.io/">
+       <h3>This research is part of the DTCCT project</h3>
+        <p class="pb-3"><em>Data-driven Toolkit to Combat Cyberbullying in Teens </em><i class="bi bi-c-circle"></i> 20244</p>
+      </a>
       </div>
     </div>
   </footer>
