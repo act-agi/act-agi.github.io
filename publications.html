@@ -85,12 +85,14 @@
   <button class="button button2" onclick="location.href="https://www.linkedin.com/in/kanishk-verma/">Connect</button>
    &nbsp;&nbsp;
    <button class="button button2" onclick="location.href='https://act-agi.github.io'">Learn about the project</button>
+   &nbsp;&nbsp;
+   <button class="button button2" onclick="toggleTable()">Show Published Research </button>
   </div>
 
    <div class="container">
   
 
-   <table>
+   <table id="researchTable">
     <tr>
         <th>Year</th>
         <th>Domain</th>
@@ -150,6 +152,17 @@
   
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+   <script>
+    function toggleTable() {
+      var table = document.getElementById("researchTable");
+      if (table.style.display === "none" || table.style.display === "") {
+        table.style.display = "table";
+      } else {
+        table.style.display = "none";
+      }
+    }
+  </script>
   
   </body>
   
