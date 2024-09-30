@@ -35,78 +35,107 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <meta name="google-site-verification" content="kO13Hc3VVcIrdA_JMssDp7vmwAdDOjt3eQTmShi7uYQ" />
   
-    <style>
-      body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        display: flex;
-       flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-  
-      .container {
-        width: 100%;
-        max-width: 800px; /* Adjust as per your requirement */
-        margin-top: 20px;
-      }
+   <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
 
-      table {
-        display: none;
-        width: 100%;
-        margin: auto;
-        border-collapse: collapse;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
     }
+
+    .button {
+      display: inline-block;
+      width: 250px; /* Ensure buttons have the same width */
+      padding: 15px 20px;
+      margin: 10px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #3498db; /* Keep color consistent */
+      color: white;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #2980b9; /* Slightly darker on hover */
+      transform: translateY(-3px); /* Lift effect on hover */
+    }
+
+    .button2 {
+      background-color: #2ecc71; /* Green */
+    }
+
+    .button2:hover {
+      background-color: #27ae60;
+    }
+
+    table {
+      display: none;
+      width: 100%;
+      margin: auto;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
     th, td {
-        padding: 12px 15px;
-        text-align: center;
+      padding: 12px 15px;
+      text-align: center;
     }
+
     th {
-        background-color: #3498db;
-        color: white;
+      background-color: #3498db;
+      color: white;
     }
+
     tr:nth-child(even) {
-        background-color: #f2f2f2;
+      background-color: #f2f2f2;
     }
+
     tr:hover {
-        background-color: #ddd;
+      background-color: #ddd;
     }
-    </style>
+  </style>
   </head>
   
   <body>
-      <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>DTCCT</span></a></h1>
-      </div>
-  
-  <div class="container">
-  <button class="button button2" onclick="location.href='https://ie.linkedin.com/in/kanishk-verma'">Let's Connect !</button>
-   &nbsp;&nbsp;
-   <button class="button button2" onclick="location.href='https://act-agi.github.io'">Visit Project Website</button>
-   &nbsp;&nbsp;
-   <button class="button button2" onclick="location.href='https://scholar.google.com/citations?user=icHkAV8AAAAJ&hl=en&oi=ao'">Discover My Research</button>
+  <div class="logo">
+    <h1 class="text-light"><a href="index.html"><span>DTCCT</span></a></h1>
   </div>
 
-  
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-  
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+  <div class="container">
+    <button class="button" onclick="location.href='https://ie.linkedin.com/in/kanishk-verma'">Let's Connect!</button>
+    <button class="button" onclick="location.href='https://act-agi.github.io'">Visit Project Website</button>
+    <button class="button" onclick="location.href='https://scholar.google.com/citations?user=icHkAV8AAAAJ&hl=en&oi=ao'">Discover My Research</button>
+  </div>
 
-   <script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
     function toggleTable() {
       var table = document.getElementById("researchTable");
       if (table.style.display === "none" || table.style.display === "") {
@@ -116,8 +145,8 @@
       }
     }
   </script>
-  
-  </body>
+
+</body>
   
   </html>
   
