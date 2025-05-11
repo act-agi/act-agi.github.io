@@ -20,10 +20,19 @@
             border-radius: 5px;
         }
         .logo {
-            font-size: 28px;
+            font-size: 24px; /* Reduced font size for the main logo text */
             margin: 0;
             letter-spacing: 2px;
             font-weight: bold;
+        }
+        .logo a {
+            color: white; /* Force the link to be white */
+            text-decoration: none; /* Remove underline */
+        }
+        .logo em {
+            font-size: 14px; /* Correct property for the subtitle */
+            display: block; /* Makes it appear on its own line */
+            margin-top: 5px; /* Add some space between main title and subtitle */
         }
         .login-container {
             text-align: center;
@@ -78,7 +87,7 @@
 </head>
 <body>
     <div class="banner">
-        <h1 class="logo"><a href="https://act-agi.github.io">DTCCT <br/> <em style="font-height:14px">Data-driven Toolkit to Combat Cyberbullying amongst Teens</em></a></h1>
+        <h1 class="logo"><a href="https://act-agi.github.io">DTCCT <br/> <em>Data-driven Toolkit to Combat Cyberbullying amongst Teens</em></a></h1>
     </div>
     <div class="login-container" id="loginContainer">
         <h1>Conversation Bags Evaluation Task</h1>
