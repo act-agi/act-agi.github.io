@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .login-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .survey-container {
+            display: none;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .checkbox-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h1>Survey Management System</h1>
+        <p>Please enter your username to access your surveys:</p>
+        <input type="text" id="usernameInput" placeholder="Enter username">
+        <button onclick="checkUsername()">Submit</button>
+    </div>
+
+    <div class="survey-container" id="surveyContainer">
+        <h1>Welcome <span id="usernameDisplay"></span></h1>
+        <p>Here are your assigned surveys:</p>
+        <table id="surveyTable">
+            <thead>
+                <tr>
+                    <th>Bag</th>
+                    <th>Survey Link</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody id="surveyTableBody">
+                <!-- Table content will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // User database - you can hardcode the usernames and their respective surveys here
+        const userDatabase = {
+            "user1": [
+                { bag: "Bag A", surveyLink: "https://example.com/survey1" },
+                { bag: "Bag B", surveyLink: "https://example.com/survey2" },
+                { bag: "Bag C", surveyLink: "https://example.com/survey3" }
+            ],
+            "user2": [
+                { bag: "Bag D", surveyLink: "https://example.com/survey4" },
+                { bag: "Bag E", surveyLink: "https://example.com/survey5" }
+            ],
+            "user3": [
+                { bag: "Bag F", surveyLink: "https://example.com/survey6" },
+                { bag: "Bag G", surveyLink: "https://example.com/survey7" },
+                { bag: "Bag H", surveyLink: "https://example.com/survey8" }
+            ]
+            // Add more users as needed
+        };
+
+        // Load saved state from localStorage
+        function loadCompletionStatus() {
+            const username = document.getElementById("usernameDisplay").textContent;
+            const storageKey = `surveyCompletion_${username}`;
+            const savedStatus = localStorage.getItem(storageKey);
+            
+            if (savedStatus) {
+                return JSON.parse(savedStatus);
+            }
+            
+            // Initialize completion status for all surveys as false
+            const initialStatus = {};
+            userDatabase[username].forEach((survey, index) => {
+                initialStatus[index] = false;
+            });
+            
+            return initialStatus;
+        }
+
+        // Save completion status to localStorage
+        function saveCompletionStatus(completionStatus) {
+            const username = document.getElementById("usernameDisplay").textContent;
+            const storageKey = `surveyCompletion_${username}`;
+            localStorage.setItem(storageKey, JSON.stringify(completionStatus));
+        }
+
+        // Function to populate the survey table for a specific user
+        function populateSurveyTable(username) {
+            const tableBody = document.getElementById("surveyTableBody");
+            tableBody.innerHTML = ""; // Clear existing table content
+            
+            if (userDatabase[username]) {
+                const completionStatus = loadCompletionStatus();
+                
+                userDatabase[username].forEach((survey, index) => {
+                    const row = document.createElement("tr");
+                    
+                    // Bag column
+                    const bagCell = document.createElement("td");
+                    bagCell.textContent = survey.bag;
+                    row.appendChild(bagCell);
+                    
+                    // Survey link column
+                    const linkCell = document.createElement("td");
+                    const link = document.createElement("a");
+                    link.href = survey.surveyLink;
+                    link.textContent = "Take Survey";
+                    link.target = "_blank";
+                    linkCell.appendChild(link);
+                    row.appendChild(linkCell);
+                    
+                    // Checkbox column
+                    const checkboxCell = document.createElement("td");
+                    checkboxCell.className = "checkbox-container";
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.checked = completionStatus[index] || false;
+                    checkbox.onchange = function() {
+                        completionStatus[index] = this.checked;
+                        saveCompletionStatus(completionStatus);
+                    };
+                    checkboxCell.appendChild(checkbox);
+                    row.appendChild(checkboxCell);
+                    
+                    tableBody.appendChild(row);
+                });
+            } else {
+                const row = document.createElement("tr");
+                const cell = document.createElement("td");
+                cell.colSpan = 3;
+                cell.textContent = "No surveys found for this username.";
+                cell.style.textAlign = "center";
+                row.appendChild(cell);
+                tableBody.appendChild(row);
+            }
+        }
+
+        // Function to handle username submission
+        function checkUsername() {
+            const usernameInput = document.getElementById("usernameInput").value.trim();
+            
+            if (userDatabase[usernameInput]) {
+                // If username exists in the database
+                document.getElementById("usernameDisplay").textContent = usernameInput;
+                document.getElementById("loginContainer").style.display = "none";
+                document.getElementById("surveyContainer").style.display = "block";
+                
+                // Populate the table with the user's surveys
+                populateSurveyTable(usernameInput);
+            } else {
+                alert("Username not found. Please try again.");
+            }
+        }
+
+        // Enable form submission with Enter key
+        document.getElementById("usernameInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkUsername();
+            }
+        });
+    </script>
+</body>
+</html>
