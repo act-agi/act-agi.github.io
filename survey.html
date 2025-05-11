@@ -111,21 +111,51 @@
     <script>
         // User database - you can hardcode the usernames and their respective surveys here
         const userDatabase = {
-            "user1": [
-                { bag: "Bag A", surveyLink: "https://example.com/survey1" },
-                { bag: "Bag B", surveyLink: "https://example.com/survey2" },
-                { bag: "Bag C", surveyLink: "https://example.com/survey3" }
+            "OnlineObserver": [
+                { bag: "Bag 1", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_88M0DZDmGFN5lki" },
+                { bag: "Bag 2", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a60HFpwsOEAqVvM" },
+                { bag: "Bag 3", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a5XWoLKkcQx5jEy" },
+                { bag: "Bag 4", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_bmbZkJ1a5lyFfAq" },
+                { bag: "Bag 5", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_8IkiMRPVRYiLQs6" },
+                { bag: "Bag 6", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_1WU0C9Q5JOs11Gu" },
+                { bag: "Bag 7", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_4NHXxPDbBtaOapw" },
             ],
-            "user2": [
-                { bag: "Bag D", surveyLink: "https://example.com/survey4" },
-                { bag: "Bag E", surveyLink: "https://example.com/survey5" }
+            "TruthTracer": [
+                { bag: "Bag 1", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_88M0DZDmGFN5lki" },
+                { bag: "Bag 2", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a60HFpwsOEAqVvM" },
+                { bag: "Bag 3", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a5XWoLKkcQx5jEy" },
+                { bag: "Bag 4", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_bmbZkJ1a5lyFfAq" },
+                { bag: "Bag 5", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_8IkiMRPVRYiLQs6" },
+                { bag: "Bag 6", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_1WU0C9Q5JOs11Gu" },
+                { bag: "Bag 7", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_4NHXxPDbBtaOapw" },
             ],
-            "user3": [
-                { bag: "Bag F", surveyLink: "https://example.com/survey6" },
-                { bag: "Bag G", surveyLink: "https://example.com/survey7" },
-                { bag: "Bag H", surveyLink: "https://example.com/survey8" }
+            "SafetyEvaluator": [
+               { bag: "Bag 1", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_88M0DZDmGFN5lki" },
+                { bag: "Bag 2", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a60HFpwsOEAqVvM" },
+                { bag: "Bag 3", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a5XWoLKkcQx5jEy" },
+                { bag: "Bag 4", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_bmbZkJ1a5lyFfAq" },
+                { bag: "Bag 5", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_8IkiMRPVRYiLQs6" },
+                { bag: "Bag 6", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_1WU0C9Q5JOs11Gu" },
+                { bag: "Bag 7", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_4NHXxPDbBtaOapw" },
+            ],
+            "EchoReflector": [
+                { bag: "Bag 1", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_88M0DZDmGFN5lki" },
+                { bag: "Bag 2", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a60HFpwsOEAqVvM" },
+                { bag: "Bag 3", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a5XWoLKkcQx5jEy" },
+                { bag: "Bag 4", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_bmbZkJ1a5lyFfAq" },
+                { bag: "Bag 5", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_8IkiMRPVRYiLQs6" },
+                { bag: "Bag 6", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_1WU0C9Q5JOs11Gu" },
+                { bag: "Bag 7", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_4NHXxPDbBtaOapw" },
+            ],
+            "GhostModeOn": [
+                { bag: "Bag 1", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_88M0DZDmGFN5lki" },
+                { bag: "Bag 2", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a60HFpwsOEAqVvM" },
+                { bag: "Bag 3", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_a5XWoLKkcQx5jEy" },
+                { bag: "Bag 4", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_bmbZkJ1a5lyFfAq" },
+                { bag: "Bag 5", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_8IkiMRPVRYiLQs6" },
+                { bag: "Bag 6", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_1WU0C9Q5JOs11Gu" },
+                { bag: "Bag 7", surveyLink: "https://dcusurveys.qualtrics.com/jfe/form/SV_4NHXxPDbBtaOapw" },
             ]
-            // Add more users as needed
         };
 
         // Load saved state from localStorage
