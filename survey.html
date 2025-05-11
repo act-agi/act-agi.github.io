@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Management</title>
+    <title>Scenario Evaluation Bags</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,13 +11,38 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .banner {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .logo {
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
         .login-container {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 30px;
         }
         .survey-container {
             display: none;
             margin-top: 30px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        #backButton {
+            background-color: #555555;
+        }
+        #contactButton {
+            background-color: #0066cc;
         }
         table {
             width: 100%;
@@ -52,8 +77,11 @@
     </style>
 </head>
 <body>
+    <div class="banner">
+        <h1 class="logo">DTCCT</h1>
+    </div>
     <div class="login-container" id="loginContainer">
-        <h1>Survey Management System</h1>
+        <h1>Scenario Evaluation Bags</h1>
         <p>Please enter your username to access your surveys:</p>
         <input type="text" id="usernameInput" placeholder="Enter username">
         <button onclick="checkUsername()">Submit</button>
@@ -62,6 +90,10 @@
     <div class="survey-container" id="surveyContainer">
         <h1>Welcome <span id="usernameDisplay"></span></h1>
         <p>Here are your assigned surveys:</p>
+        <div class="button-container">
+            <button id="backButton" onclick="window.location.href='#'">Take me back to project page</button>
+            <button id="contactButton" onclick="window.location.href='mailto:researcher@example.com'">Contact researcher</button>
+        </div>
         <table id="surveyTable">
             <thead>
                 <tr>
