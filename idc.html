@@ -73,14 +73,17 @@
     <div class="container">
         <h1>Welcome to our Research Poster !</h1>
         <div class="buttons">
-            <a href="https://act-agi.github.io" class="btn btn-primary" id="projectBtn">Take me to the project</a>
-            <button class="btn btn-secondary" id="paperBtn">Read the paper</button>
-
-            <button class="btn btn-secondary" id="linkedinBtn">Let's Connect </button>
+            <button class="btn btn-primary" id="projectBtn">Take me to the project</button>
+            <button class="btn btn-primary" id="paperBtn">Read the paper</button>
+            <button class="btn btn-primary" id="linkedinBtn">Let's Connect </button>
         </div>
     </div>
 
     <script>
+        document.getElementById('projectBtn').addEventListener('click', function() {
+            window.open('https://act-agi.github.io', '_blank');
+        });
+        
         document.getElementById('paperBtn').addEventListener('click', function() {
             window.open('https://dl.acm.org/doi/10.1145/3713043.3731485', '_blank');
         });
