@@ -75,12 +75,18 @@
         <div class="buttons">
             <a href="https://act-agi.github.io" class="btn btn-primary" id="projectBtn">Take me to the project</a>
             <button class="btn btn-secondary" id="paperBtn">Read the paper</button>
+
+            <button class="btn btn-secondary" id="linkedinBtn">Let's Connect </button>
         </div>
     </div>
 
     <script>
         document.getElementById('paperBtn').addEventListener('click', function() {
-            alert("The paper is currently accepted at ACM's Interactive Design and Children (IDC) conference in 2025 and will appear in June.");
+            window.open('https://dl.acm.org/doi/10.1145/3713043.3731485', '_blank');
+        });
+        
+        document.getElementById('linkedinBtn').addEventListener('click', function() {
+            window.open('https://www.linkedin.com/in/kanishk-verma/', '_blank');
         });
     </script>
 </body>
